@@ -1,5 +1,4 @@
-import br.com.inatel.Professor;
-import br.com.inatel.ProfessorService;
+package br.com.inatel;
 
 public class MockProfessorService implements ProfessorService {
     @Override

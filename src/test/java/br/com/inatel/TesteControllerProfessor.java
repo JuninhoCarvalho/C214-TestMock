@@ -1,6 +1,5 @@
-import br.com.inatel.Professor;
-import br.com.inatel.ProfessorController;
-import br.com.inatel.ProfessorService;
+package br.com.inatel;
+
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;

@@ -1,3 +1,5 @@
+package br.com.inatel;
+
 public class ProfessorConst {
 
     public static String CHRIS =
