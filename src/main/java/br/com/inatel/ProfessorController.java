@@ -3,22 +3,21 @@ package br.com.inatel;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-public class ControllerProfessor {
+public class ProfessorController {
 
     ProfessorService professorService;
 
-    public ControllerProfessor(ProfessorService service){
+    public ProfessorController(ProfessorService service){
         this.professorService = service;
     }
 
-    public String insereNovoHorario(String nome, String horario, String periodo){
-        if(professorService.periodoValido(periodo)){
-            Professor p = new Professor(nome, horario, periodo);
+    public String insereNovoHorario(Professor p){
+        if(professorService.periodoValido(p.getPeriodo()) && professorService.horarioValido(p.getHorario())){
             professorService.save(p);
-            return "Novo horario salvo para o professor " + nome;
+            return "Novo horario salvo!";
         }
         else{
-            return "Periodo inválido para cadastro";
+            return "Impossivel cadastrar com esses dados";
         }
     }
 

@@ -22,10 +22,16 @@ public class MockProfessorService implements ProfessorService {
         if(nome.equals("Chris")) {
             return ProfessorConst.CHRIS;
         }
-        else if(nome.equals("Fulano")){
-            return ProfessorConst.FULANO;
+
+        return ProfessorConst.INVALIDO;
+    }
+
+    @Override
+    public boolean horarioValido(String horario) {
+        if (horario.length()!=5){
+            return false;
         }
-        else
-            return ProfessorConst.INVALIDO;
+
+        return true;
     }
 }

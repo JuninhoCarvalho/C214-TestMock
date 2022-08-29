@@ -6,4 +6,6 @@ public interface ProfessorService {
     void save(Professor p);
 
     String buscaProfessor(String nome);
+
+    boolean horarioValido(String horario);
 }
